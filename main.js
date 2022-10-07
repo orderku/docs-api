@@ -27,7 +27,7 @@ function includeHTML() {
       return;
     }
   }
-}
+};
 
 
 
@@ -63,19 +63,8 @@ function includeHTML() {
               };
               xhrsd.open("GET", urlsd, true);
               xhrsd.send();
-  }
+  };
 
-  function getserver(){
-               xhrqq = new XMLHttpRequest();
-               urlqq = 'https://api.akuari.my.id/info/ping/';
-              xhrqq.onloadend = function(){
-             dataqq = JSON.parse(this.responseText);
-                  document.getElementById("pingkg").textContent = dataqq.status
-                document.getElementById("status").textContent = dataqq.server
-              };
-              xhrqq.open("GET", urlqq, true);
-              xhrqq.send();
-  }
 
 
    setInterval((g) => {
@@ -110,3 +99,14 @@ var date3 = birthday.getFullYear();
      
  }, 250);
 
+  function getserver(){
+               xhrqq = new XMLHttpRequest();
+               urlqq = 'https://api.akuari.my.id/info/ping/';
+              xhrqq.onloadend = function(){
+             dataqq = JSON.parse(this.responseText);
+                  document.getElementById("pingkg").textContent = dataqq.status
+                document.getElementById("status").textContent = dataqq.server
+              };
+              xhrqq.open("GET", urlqq, true);
+              xhrqq.send();
+  };
