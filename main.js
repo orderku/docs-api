@@ -27,7 +27,7 @@ function includeHTML() {
       return;
     }
   }
-};
+}
 
 
 
@@ -50,21 +50,21 @@ function includeHTML() {
             x[i].classList.add("currSign");
         }
 
-  function getipne(){
-               xhrsd = new XMLHttpRequest();
-               urlsd = 'hhttps://ipapi.co/json/';
-              xhrsd.onloadend = function(){
-             dataqe = JSON.parse(this.responseText);
-  document.getElementById("ipne").textContent = dataqe.ip
-  document.getElementById("ipid").textContent = dataqe.country_name
-    document.getElementById("ipid1").textContent = dataqe.city
-    document.getElementById("ipid2").textContent = dataqe.region
-    document.getElementById("ipid3").textContent = dataqe.org
-              };
-              xhrsd.open("GET", urlsd, true);
-              xhrsd.send();
-  };
 
+  function getipne(){
+              var xhr = new XMLHttpRequest();
+              var url = 'https://ipapi.co/json/';
+              xhr.onloadend = function(){
+             data = JSON.parse(this.responseText);
+  document.getElementById("ipne").textContent = data.ip
+  document.getElementById("ipid").textContent = data.country_name
+    document.getElementById("ipid1").textContent = data.city
+    document.getElementById("ipid2").textContent = data.region
+    document.getElementById("ipid3").textContent = data.org
+              };
+              xhr.open("GET", url, true);
+              xhr.send();
+  }
 
 
    setInterval((g) => {
@@ -99,14 +99,12 @@ var date3 = birthday.getFullYear();
      
  }, 250);
 
-  function getserver(){
-               xhrqq = new XMLHttpRequest();
-               urlqq = 'https://api.akuari.my.id/info/ping/';
-              xhrqq.onloadend = function(){
-             dataqq = JSON.parse(this.responseText);
-                  document.getElementById("pingkg").textContent = dataqq.status
-                document.getElementById("status").textContent = dataqq.server
+var xhrds = new XMLHttpRequest();
+              var urlds = 'https://api.akuari.my.id/info/ping';
+              xhrds.onloadend = function(){
+             datads = JSON.parse(this.responseText);
+  document.getElementById("pingkg").textContent = datads.status
+                document.getElementById("status").textContent = datads.server
               };
-              xhrqq.open("GET", urlqq, true);
-              xhrqq.send();
-  };
+              xhrds.open("GET", urlds, true);
+              xhrds.send();
