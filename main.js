@@ -51,23 +51,23 @@ function includeHTML() {
         }
 
   function getipne(){
-              var xhr = new XMLHttpRequest();
-              var url = 'hhttps://ipapi.co/json/';
-              xhr.onloadend = function(){
-             data = JSON.parse(this.responseText);
-  document.getElementById("ipne").textContent = data.ip
-  document.getElementById("ipid").textContent = data.country_name
-    document.getElementById("ipid1").textContent = data.city
-    document.getElementById("ipid2").textContent = data.region
-    document.getElementById("ipid3").textContent = data.org
+               xhrsd = new XMLHttpRequest();
+               urlsd = 'hhttps://ipapi.co/json/';
+              xhrsd.onloadend = function(){
+             dataqe = JSON.parse(this.responseText);
+  document.getElementById("ipne").textContent = dataqe.ip
+  document.getElementById("ipid").textContent = dataqe.country_name
+    document.getElementById("ipid1").textContent = dataqe.city
+    document.getElementById("ipid2").textContent = dataqe.region
+    document.getElementById("ipid3").textContent = dataqe.org
               };
-              xhr.open("GET", url, true);
-              xhr.send();
+              xhrsd.open("GET", urlsd, true);
+              xhrsd.send();
   }
 
   function getserver(){
-              var xhrqq = new XMLHttpRequest();
-              var urlqq = 'https://api.akuari.my.id/info/ping/';
+               xhrqq = new XMLHttpRequest();
+               urlqq = 'https://api.akuari.my.id/info/ping/';
               xhrqq.onloadend = function(){
              dataqq = JSON.parse(this.responseText);
                   document.getElementById("pingkg").textContent = dataqq.status
