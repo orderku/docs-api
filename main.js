@@ -50,9 +50,9 @@ function includeHTML() {
             x[i].classList.add("currSign");
         }
 
-  function getserver(){
+  function getipne(){
               var xhr = new XMLHttpRequest();
-              var url = 'https://api.akuari.my.id/info/ping';
+              var url = 'hhttps://ipapi.co/json/';
               xhr.onloadend = function(){
              data = JSON.parse(this.responseText);
   document.getElementById("ipne").textContent = data.ip
@@ -65,16 +65,16 @@ function includeHTML() {
               xhr.send();
   }
 
-  function getipne(){
-              var xhr = new XMLHttpRequest();
-              var url = 'https://ipapi.co/json/';
-              xhr.onloadend = function(){
-             data = JSON.parse(this.responseText);
-                  document.getElementById("pingkg").textContent = datads.status
-                document.getElementById("status").textContent = datads.server
+  function getserver(){
+              var xhrqq = new XMLHttpRequest();
+              var urlqq = 'https://api.akuari.my.id/info/ping/';
+              xhrqq.onloadend = function(){
+             dataqq = JSON.parse(this.responseText);
+                  document.getElementById("pingkg").textContent = dataqq.status
+                document.getElementById("status").textContent = dataqq.server
               };
-              xhr.open("GET", url, true);
-              xhr.send();
+              xhrqq.open("GET", urlqq, true);
+              xhrqq.send();
   }
 
 
