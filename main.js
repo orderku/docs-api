@@ -98,7 +98,7 @@ var date3 = birthday.getFullYear();
   
      
  }, 250);
-function getipne(){
+function server(){
 
 var xhrds = new XMLHttpRequest();
               var urlds = 'https://api.akuari.my.id/info/ping';
