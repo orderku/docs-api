@@ -50,10 +50,9 @@ function includeHTML() {
             x[i].classList.add("currSign");
         }
 
-
-  function getipne(){
+  function getserver(){
               var xhr = new XMLHttpRequest();
-              var url = 'https://ipapi.co/json/';
+              var url = 'https://api.akuari.my.id/info/ping';
               xhr.onloadend = function(){
              data = JSON.parse(this.responseText);
   document.getElementById("ipne").textContent = data.ip
@@ -61,6 +60,18 @@ function includeHTML() {
     document.getElementById("ipid1").textContent = data.city
     document.getElementById("ipid2").textContent = data.region
     document.getElementById("ipid3").textContent = data.org
+              };
+              xhr.open("GET", url, true);
+              xhr.send();
+  }
+
+  function getipne(){
+              var xhr = new XMLHttpRequest();
+              var url = 'https://ipapi.co/json/';
+              xhr.onloadend = function(){
+             data = JSON.parse(this.responseText);
+                  document.getElementById("pingkg").textContent = datads.status
+                document.getElementById("status").textContent = datads.server
               };
               xhr.open("GET", url, true);
               xhr.send();
@@ -98,15 +109,4 @@ var date3 = birthday.getFullYear();
   
      
  }, 250);
-function server(){
 
-var xhrds = new XMLHttpRequest();
-              var urlds = 'https://api.akuari.my.id/info/ping';
-              xhrds.onloadend = function(){
-             datads = JSON.parse(this.responseText);
-  document.getElementById("pingkg").textContent = datads.status
-                document.getElementById("status").textContent = datads.server
-              };
-              xhrds.open("GET", urlds, true);
-              xhrds.send();
-}
