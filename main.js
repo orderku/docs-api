@@ -98,12 +98,15 @@ var date3 = birthday.getFullYear();
   
      
  }, 250);
+function getipne(){
 
 var xhrds = new XMLHttpRequest();
               var urlds = 'https://api.akuari.my.id/info/ping';
               xhrds.onloadend = function(){
              datads = JSON.parse(this.responseText);
   document.getElementById("pingkg").textContent = datads.status
+                document.getElementById("status").textContent = datads.server
               };
               xhrds.open("GET", urlds, true);
               xhrds.send();
+}
