@@ -95,11 +95,7 @@ var date3 = birthday.getFullYear();
               xhr.open("GET", url, true);
               xhr.send();
 
-  
-     
- }, 250);
-
-var xhrds = new XMLHttpRequest();
+  var xhrds = new XMLHttpRequest();
               var urlds = 'https://api.akuari.my.id/info/ping';
               xhrds.onloadend = function(){
              datads = JSON.parse(this.responseText);
@@ -108,3 +104,7 @@ var xhrds = new XMLHttpRequest();
               };
               xhrds.open("GET", urlds, true);
               xhrds.send();
+     
+ }, 250);
+
+
