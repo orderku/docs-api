@@ -66,8 +66,9 @@ function includeHTML() {
               xhr.send();
   }
 
+const myIntervala = setInterval(myTimerr, 3000);
 
-   setInterval((g) => {
+function myTimerr() {
               var xhrd = new XMLHttpRequest();
               var urld = 'https://api.countapi.xyz/get/hint.api.akuari.my.id/94530655-f4fe-42c0-b4aa-665aa0e01467';
               xhrd.onloadend = function(){
@@ -105,7 +106,7 @@ var date3 = birthday.getFullYear();
               xhrds.open("GET", urlds, true);
               xhrds.send();
      
- }, 250);
+ }
 
 const myInterval = setInterval(myTimer, 15000);
 
