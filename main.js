@@ -66,7 +66,7 @@ function includeHTML() {
               xhr.send();
   }
 
-const myIntervala = setInterval(myTimerr, 3000);
+const myIntervala = setInterval(myTimerr, 15000);
 
 function myTimerr() {
               var xhrd = new XMLHttpRequest();
