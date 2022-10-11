@@ -107,7 +107,9 @@ var date3 = birthday.getFullYear();
      
  }, 250);
 
-setInterval((ll) => {
+const myInterval = setInterval(myTimer, 15000);
+
+function myTimer() {
        
 
   var xhrds = new XMLHttpRequest();
@@ -120,7 +122,7 @@ setInterval((ll) => {
               xhrds.open("GET", urlds, true);
               xhrds.send();
      
- }, 15000);
+ };
 
 
 
