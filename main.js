@@ -66,7 +66,7 @@ function includeHTML() {
               xhr.send();
   }
 
-const myIntervala = setInterval(myTimerr, 15000);
+const myIntervala = setInterval(myTimerr, 3000);
 
 function myTimerr() {
               var xhrd = new XMLHttpRequest();
@@ -108,9 +108,7 @@ var date3 = birthday.getFullYear();
      
  }
 
-const myInterval = setInterval(myTimer, 15000);
 
-function myTimer() {
        
 
   var xhrds = new XMLHttpRequest();
@@ -122,8 +120,7 @@ function myTimer() {
               };
               xhrds.open("GET", urlds, true);
               xhrds.send();
-     
- };
+
 
 
 
